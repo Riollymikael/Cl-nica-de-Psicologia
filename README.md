@@ -9,7 +9,7 @@ Desenvolvido por **Riolly Mikael**.
 
 <div align="center">
 
-    <!-- IMAGEM DE PREVIEW -->
+  <!-- IMAGEM DE PREVIEW -->
   <img src="images/preview.png" alt="Prévia da Landing Page Clínica de Psicologia" width="100%">
 
   <br><br>
