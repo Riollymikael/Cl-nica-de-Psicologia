@@ -1,0 +1,707 @@
+/* ==========================================================================
+   LANDING PAGE - DR. PSICOLOGIA CLÍNICA & SAÚDE MENTAL
+   Paleta: Azul Suave (Paz/Segurança), Menta (Equilíbrio) e Terroso Claro (Acolhimento)
+   Desenvolvido por Riolly
+   ========================================================================== */
+
+/* RESET E TIPOGRAFIA ELEGANTE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    /* Fonts */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+
+    /* Tons Terrosos Claros & Off-White (Acolhimento) */
+    --bg-primary: #FAF7F2;          /* Off-White quente / Bege claríssimo */
+    --bg-secondary: #FFFFFF;        /* Branco Puro para cards */
+    --terroso-claro: #D4C5B9;       /* Bege Terroso Acolhedor */
+    --terroso-suave: #EFE8E1;       /* Fundo suave terroso para badges/logo */
+    --marrom-suave: #6B4E3D;        /* Marrom Calmo e Acolhedor para Logo e Destaques */
+
+    /* Azul Suave (Segurança, Paz e Confiança) */
+    --azul-suave: #4A7B9D;          /* Azul Profundo Sereno */
+    --azul-light: #EBF3F7;          /* Azul Fundo Suave */
+
+    /* Verde-Água / Menta (Equilíbrio e Saúde Mental) */
+    --menta-primary: #529485;      /* Verde Menta Forte para botões e CTA */
+    --menta-light: #88BBAE;        /* Verde Menta Suave */
+    --menta-bg: #E8F2EF;           /* Fundo Menta Clarinho */
+
+    /* Textos & Detalhes */
+    --text-color: #2C3531;          /* Grafite Suave para leitura relaxante */
+    --text-light: #525C58;         /* Cinza Acolhedor com boa leitura */
+    --footer-bg: #1F2D29;           /* Tom Terroso/Verde Floresta Escuro */
+    --whatsapp-green: #25D366;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-color);
+    line-height: 1.7;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+.section-tag {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    color: var(--azul-suave);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+    font-family: var(--font-body);
+}
+
+/* BOTÃO WHATSAPP PULSANTE (RESPIRANTE) */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--whatsapp-green);
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 32px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* MENU FIXO DESLIZANTE */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(250, 247, 242, 0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--terroso-claro);
+    z-index: 999;
+    padding: 12px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO EM TOM MARROM SUAVE E ELEGANTE */
+.logo {
+    text-decoration: none !important;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--terroso-suave);
+    padding: 8px 22px;
+    border-radius: 14px;
+    border: 1px solid var(--terroso-claro);
+    color: var(--marrom-suave) !important;
+    transition: all 0.3s ease;
+}
+
+.logo i {
+    color: var(--marrom-suave) !important;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.logo, 
+.logo span, 
+.logo-title, 
+.logo-sub {
+    color: var(--marrom-suave) !important;
+}
+
+.logo-title {
+    font-family: var(--font-heading);
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 0.3px;
+}
+
+.logo-sub {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 3px;
+    font-family: var(--font-body);
+}
+
+.logo:hover {
+    background-color: #E5DCD3;
+    border-color: #B8A598;
+    transform: translateY(-1px);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--azul-suave);
+}
+
+.btn-nav {
+    background-color: var(--menta-primary);
+    color: #fff !important;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    transition: 0.3s !important;
+}
+
+.btn-nav:hover {
+    background-color: var(--menta-light);
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 160px 0 90px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.badge-crp {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--azul-light);
+    color: var(--azul-suave);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    border: 1px solid rgba(74, 123, 157, 0.2);
+}
+
+.hero-text h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.hero-text p {
+    color: var(--text-light);
+    margin-bottom: 32px;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--menta-primary);
+    color: #FFF;
+}
+
+.btn-primary:hover {
+    background-color: var(--menta-light);
+}
+
+.btn-secondary {
+    border: 1px solid var(--azul-suave);
+    color: var(--azul-suave);
+    background-color: transparent;
+}
+
+.btn-secondary:hover {
+    background-color: var(--azul-light);
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+    border: 3px solid var(--terroso-suave);
+}
+
+/* SEÇÃO SOBRE A DOUTORA */
+.doutora {
+    padding: 95px 0;
+    background-color: var(--bg-secondary);
+}
+
+.doutora-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.doutora-img {
+    flex: 1;
+    position: relative;
+}
+
+.doutora-img img {
+    width: 100%;
+    border-radius: 24px;
+    border: 3px solid var(--terroso-suave);
+}
+
+.doutora-card-badge {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background: var(--menta-primary);
+    color: #FFF;
+    padding: 16px 26px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(82, 148, 133, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+.doutora-card-badge span {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: var(--font-heading);
+}
+
+.doutora-card-badge small {
+    font-size: 11px;
+    opacity: 0.95;
+    font-family: var(--font-body);
+}
+
+.doutora-text {
+    flex: 1;
+}
+
+.doutora-text h2 {
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.highlight-p {
+    font-family: var(--font-heading);
+    font-size: 21px;
+    font-style: italic;
+    color: var(--azul-suave);
+    margin-bottom: 18px;
+    line-height: 1.4;
+}
+
+.doutora-text p {
+    color: var(--text-light);
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.qualificacoes-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.q-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--bg-primary);
+    padding: 16px 22px;
+    border-radius: 14px;
+    border: 1px solid var(--terroso-suave);
+}
+
+.q-item i {
+    font-size: 22px;
+    color: var(--azul-suave);
+}
+
+.q-item h4 {
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.q-item p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* SEÇÃO DEMANDAS (COMO POSSO AJUDAR) */
+.como-ajudo {
+    padding: 95px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+}
+
+.section-title p {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 8px auto 0 auto;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--bg-secondary);
+    padding: 32px 26px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border: 1px solid var(--terroso-suave);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--menta-light);
+    box-shadow: 0 8px 25px rgba(136, 187, 174, 0.2);
+}
+
+.card-icon-box {
+    width: 52px;
+    height: 52px;
+    background: var(--menta-bg);
+    color: var(--menta-primary);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* GALERIA / O CONSULTÓRIO */
+.galeria {
+    padding: 95px 0;
+    background-color: var(--bg-secondary);
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.galeria-card {
+    text-align: center;
+    background: var(--bg-primary);
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--terroso-suave);
+}
+
+.galeria-card-title {
+    font-size: 22px;
+    color: var(--azul-suave);
+    margin-bottom: 14px;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.galeria-card-desc {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 12px;
+}
+
+.galeria-card-wide {
+    grid-column: span 2;
+}
+
+.galeria-card-wide .galeria-item img {
+    height: 230px;
+}
+
+/* SEÇÃO FAQ (DÚVIDAS FREQUENTES) */
+.faq {
+    padding: 95px 0;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 25px;
+}
+
+.faq-item {
+    background: var(--bg-secondary);
+    padding: 28px;
+    border-radius: 18px;
+    border: 1px solid var(--terroso-suave);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.faq-item h4 {
+    font-size: 20px;
+    color: var(--azul-suave);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq-item p {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+/* DEPOIMENTOS DE PACIENTES */
+.depoimentos {
+    padding: 95px 0;
+    background-color: var(--bg-secondary);
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.depoimento-card {
+    background-color: var(--bg-primary);
+    padding: 32px;
+    border-radius: 20px;
+    position: relative;
+    border: 1px solid var(--terroso-suave);
+}
+
+.quote-icon {
+    color: var(--terroso-claro);
+    font-size: 26px;
+    margin-bottom: 16px;
+}
+
+.depoimento-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 22px;
+    font-style: italic;
+}
+
+.patient-info strong {
+    display: block;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.patient-info span {
+    font-size: 12px;
+    color: var(--azul-suave);
+}
+
+/* RODAPÉ E BOTÕES MÍDIAS SOCIAIS */
+.footer {
+    background-color: var(--footer-bg);
+    color: #FFF;
+    padding-top: 65px;
+}
+
+.footer h3 {
+    color: #FFF;
+    font-size: 28px;
+}
+
+.crp-text {
+    color: var(--menta-light);
+    font-size: 13px;
+    margin: 4px 0 14px 0;
+    font-weight: 600;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 45px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-info p {
+    color: #A0AAA5;
+    font-size: 14px;
+}
+
+.footer-social h4 {
+    color: #FFF;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.social-boxes {
+    display: flex;
+    gap: 15px;
+}
+
+.social-box {
+    width: 46px;
+    height: 46px;
+    background-color: rgba(255,255,255,0.08);
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.whatsapp-box:hover {
+    background-color: var(--whatsapp-green);
+}
+
+.instagram-box:hover {
+    background-color: #E1306C;
+}
+
+.footer-bottom {
+    padding: 24px 0;
+    font-size: 13px;
+    color: #808A85;
+}
+
+.footer-bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.credits strong {
+    color: var(--terroso-claro);
+}
+
+/* RESPONSIVIDADE (MOBILE & TABLETS) */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hero-content, .doutora-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .badge-crp {
+        margin: 0 auto 15px auto;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .doutora-card-badge {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .galeria-grid, .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-card-wide {
+        grid-column: span 1;
+    }
+
+    .footer-content, .footer-bottom-flex {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
