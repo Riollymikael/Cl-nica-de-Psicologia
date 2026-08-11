@@ -10,7 +10,7 @@ Desenvolvido por **Riolly Mikael**.
 <div align="center">
 
   <!-- IMAGEM DE PREVIEW -->
-  <img src="assets/images/preview(3).png" alt="Prévia da Landing Page Psicologia & Vida" width="100%">
+  <img src="assets/images/preview (3).png" alt="Prévia da Landing Page Psicologia & Vida" width="100%">
 
   <br><br>
 
