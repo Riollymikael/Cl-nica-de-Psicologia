@@ -59,10 +59,9 @@ Uma landing page moderna, acolhedora, altamente conversiva e 100% responsiva par
 psicologia-e-vida-landing-page/
 │
 ├── assets/
-│   └── images/          # Imagens do site e preview
+│   └── imagens/          # Imagens do site e preview
 ├── css/
 │   └── style.css        # Estilos globais
-├── js/
-│   └── script.js        # Lógica JavaScript
+│   
 ├── index.html           # Página principal
 └── README.md            # Documentação
